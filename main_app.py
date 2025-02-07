@@ -9,7 +9,6 @@ import sentimentanalysis
 import language
 import spellingcorrection
 import textclassification
-import speechrecgonition
 import contentgeneration
 
 
@@ -18,7 +17,7 @@ st.set_page_config(page_title="Sreamlit App", page_icon="💼", layout="wide")
 with st.sidebar:
     selected = option_menu(
         menu_title = "Main menu",
-        options = ["📜 JSON Parsing","💬  Invoice QnA", "💬 Multiple Invoice QnA", "📧 Email Spam Detection","📝  Summarization","🧠💬 Sentiment Analysis","🌍🔤  Language Detection & Translation","✅ Spelling Correction","🏷️ Text Classification","🗣️ Speech Recognition","💡 Content Generation"],
+        options = ["📜 JSON Parsing","💬  Invoice QnA", "💬 Multiple Invoice QnA", "📧 Email Spam Detection","📝  Summarization","🧠💬 Sentiment Analysis","🌍🔤  Language Detection & Translation","✅ Spelling Correction","🏷️ Text Classification","💡 Content Generation"],
         icons = ['Home','Home',"Buger",'Home',"Buger",'Home',"Buger",'Home',"Buger",'Home',"Buger"]
     )
 
@@ -47,9 +46,6 @@ elif selected == "✅ Spelling Correction":
 
 elif selected == "🏷️ Text Classification":
     textclassification.run()
-
-elif selected == "🗣️ Speech Recognition":
-    speechrecgonition.run()
 
 elif selected == "💡 Content Generation":
     contentgeneration.run()
